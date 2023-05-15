@@ -1,0 +1,29 @@
+.outer-container {
+    height: 90vh;
+    background-color: gray;
+    overflow: hidden;
+}
+
+.btn{
+    align-self: flex-start;
+}
+
+@media (min-width:300px) and (max-width:900px) {
+    .image img{
+        margin: 2rem 0 0 0;
+    }
+    .tagline{
+        font-size: 28px;
+        padding: 10px 25px;
+        text-align: left;
+        margin: 0;
+    }
+    p{
+        font-size: 15px !important;
+        padding: 10px 25px;
+        text-align: left;
+    }
+    .btn{
+        align-self: center;
+    }
+}

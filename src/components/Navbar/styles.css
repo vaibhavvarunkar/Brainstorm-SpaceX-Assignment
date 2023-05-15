@@ -1,0 +1,32 @@
+.navbar-container {
+    min-height: 10vh;
+}
+
+.brand-name {
+    font-size: 35px !important;
+    font-weight: 700;
+}
+
+.links {
+    font-size: 25px !important;
+    margin: 0 30px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:active{
+    color: red;
+}
+
+@media (min-width:300px) and (max-width:900px) {
+    .brand-name {
+        font-size: 25px !important;
+    }
+
+    .links {
+        font-size: 18px !important;
+        margin: 0;
+    }
+}

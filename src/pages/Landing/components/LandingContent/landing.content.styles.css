@@ -1,0 +1,40 @@
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+}
+
+.tagline{
+    font-size: 36px;
+    font-weight: 700;
+    color: whitesmoke;
+    margin-right: 20px;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+
+@media (min-width:300px) and (max-width:900px) {
+    .tagline{
+        font-size: 28px;
+        padding: 10px 25px;
+        text-align: center;
+        margin: 0;
+    }
+    p{
+        font-size: 15px !important;
+        padding: 10px 25px;
+        text-align: justify;
+    }
+    .btn{
+        align-self: center;
+    }
+}
