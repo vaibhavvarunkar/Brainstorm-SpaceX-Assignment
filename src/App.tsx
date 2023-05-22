@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { store } from './service/store';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/layout.view';
-import Rockets from './pages/Rockets/rockets.container';
+import Ships from './pages/Rockets/ships.container';
 function App() {
   return (
     <>
@@ -19,10 +19,10 @@ function App() {
             }
           >
           </Route>
-          <Route path='/rockets'
+          <Route path='/ships'
             element={
             <Layout>
-              <Rockets />
+              <Ships />
             </Layout>
             }
           >

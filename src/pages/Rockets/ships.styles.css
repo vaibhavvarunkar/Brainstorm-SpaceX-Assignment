@@ -1,0 +1,31 @@
+.rocket-page{
+    background-color: gray;
+    min-height: 90vh;
+    width: 100%;
+    padding: 0 !important;
+    padding-top: 20px !important;
+    margin: 0 !important;
+}
+
+.cards{
+    margin: 0 !important;
+}
+
+.cards-body{
+    padding: 20px !important;
+    margin: 20px 0;
+}
+
+h5{
+    margin: 5px !important;
+}
+
+span{
+    font-weight: 700;
+}
+
+.pagination-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

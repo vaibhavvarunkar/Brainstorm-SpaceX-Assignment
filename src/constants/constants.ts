@@ -1,0 +1,2 @@
+export const API_BASE_URL = process.env.REACT_APP_BASE_URL;
+export const image_sample = "https://media.istockphoto.com/id/1284416170/photo/aerial-front-view-of-a-loaded-container-cargo-vessel.jpg?s=612x612&w=0&k=20&c=hXlMGj4Kks6QAbRHLXNuy-14vKc-GHMfwqpktgtMOek="

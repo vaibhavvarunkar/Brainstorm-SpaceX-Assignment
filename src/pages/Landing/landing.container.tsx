@@ -1,12 +1,12 @@
 import React from 'react'
 import LandingPageView from './landing.view'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const LandingPage = () => {
   const navigate = useNavigate()
 
   const getStartedClick = () => {
-    navigate("/rockets")
+    navigate("/ships")
   }
   return (
     <LandingPageView getStartedClick={getStartedClick} />
