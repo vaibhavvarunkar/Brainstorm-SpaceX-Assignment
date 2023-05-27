@@ -19,7 +19,7 @@ const Popup: React.FC<PopupProps> = (props) => {
                         <Col className="d-flex justify-content-center align-items-center"  sm={12} lg={6}>
                             <img alt='ship' src={props?.popupData?.image}></img>
                         </Col>
-                        <Col  style={{ height:"600px", textJustify:"auto"}} sm={12} lg={6}>
+                        <Col className='column-info'  style={{ height:"600px", textJustify:"auto"}} sm={12} lg={6}>
                             <Row>
                                 <Col className="text-center"  xs={6}>
                                     <h3>Name</h3>

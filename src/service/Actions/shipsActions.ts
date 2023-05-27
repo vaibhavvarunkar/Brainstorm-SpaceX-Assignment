@@ -6,9 +6,11 @@ export const _getShipsInfo = createAsyncThunk(
   GET_ROCKETS,
   async (
     //optional limit parameter
-    params: { limit?: number },
+    params: { ship_type?: string, year_built?:number | string, home_port?:string },
     { rejectWithValue }
   ): Promise<any> => {
+    console.log(params);
+    
     try {
       const response = await getAPI(
         params,

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { initialState } from "./initialState";
 import { _getShipsInfo } from "../../Actions/shipsActions";
-import { validateData } from "./utils";
+import {  loadTypeFilterOptions, validateData,  } from "./utils";
 
 const shipsSlice = createSlice({
   name: "ships",
@@ -9,6 +9,15 @@ const shipsSlice = createSlice({
   reducers: {
     setPopupdata(state, action) {
       state.popupData = action.payload
+    },
+    setTypeParam(state, action){
+      state.typeParam = action.payload
+    },
+    setYearParam(state, action){
+      state.yearParam = action.payload.value.toString()
+    },
+    setPortParam(state, action){
+      state.portParam = action.payload.value.toString()
     }
   },
   extraReducers: (builder) => {
@@ -25,7 +34,13 @@ const shipsSlice = createSlice({
         fullfilled: true,
         rejected: false,
       };
+      
       state.data = validateData(payload)
+      if(state.typeParam.length === 0 && state.yearParam === ""){
+        state.TypeFilter = loadTypeFilterOptions(payload, "ship_type")
+        state.yearFilter = loadTypeFilterOptions(payload, "year_built")
+        state.portFilter = loadTypeFilterOptions(payload, "home_port")
+      }
     });
     builder.addCase(_getShipsInfo.rejected, (state, payload: any) => {
       state.loaders.rocketsResponse = {
@@ -39,7 +54,10 @@ const shipsSlice = createSlice({
 });
 
 export const {
-  setPopupdata: dispatchSetPopupData
+  setPopupdata: dispatchSetPopupData,
+  setTypeParam:dispatchSetTypeParam,
+  setYearParam:dispatchSetYearParam,
+  setPortParam:dispatchSetPortParam
 } = shipsSlice.actions
 
 export default shipsSlice

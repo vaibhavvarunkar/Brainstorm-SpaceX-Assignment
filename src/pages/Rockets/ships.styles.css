@@ -5,6 +5,7 @@
     padding: 0 !important;
     padding-top: 20px !important;
     margin: 0 !important;
+    overflow: hidden;
 }
 
 .cards{
@@ -28,4 +29,5 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1rem 0;
 }
