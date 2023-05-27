@@ -15,8 +15,9 @@
 }
 
 .popup-content img {
-    height: 600px;
+    height: 90%;
     width: 700px;
+    margin: 0 0 50px 0;
 }
 
 .close-button {
@@ -43,6 +44,7 @@
 @media (min-width:300px) and (max-width:900px) {
     .popup-content{
         width:90%;
+        height: 30%;
         overflow-y: scroll;
         overflow-x: hidden;
     }
@@ -51,11 +53,20 @@
         height: 300px;
         width: 500px;
         padding: 10px 5px;
+        margin: 10px 0 0 0;
     }
     .popup-content span{
         font-size: 13px;
     }
     .popup-content h3{
         font-size: 16px;
+    }
+
+    .column-info{
+        height: 400px !important;
+    }
+
+    .close-button{
+      right: 8%;  
     }
 }

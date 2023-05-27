@@ -1,3 +1,5 @@
+import { MultiValue, SingleValue } from "react-select";
+
 export interface APIStatus {
     pending: boolean;
     fullfilled: boolean;
@@ -19,6 +21,21 @@ export interface ShipsInitialState{
     data:any,
     error:string,
     popupData:any | ShipInfo
+    TypeFilter:Option[]
+    yearFilter:Option[]
+    typeParam: string[]
+    yearParam: string
+    portParam:string
+    portFilter:Option[]
+}
+
+export interface SliceTypes{
+    ships:ShipsInitialState
+}
+
+export interface Option{
+    label:string
+    value:string | number
 }
 
 export interface ShipInfo{
@@ -45,4 +62,12 @@ export interface ShipsSlice{
 export interface ApiResponse{
     data:ShipInfo[]
     headers:any
+}
+
+export interface FilterOptions{
+    placeholder:string
+    options:Option[]
+    selected:MultiValue<Option> | SingleValue<Option>
+    handleChange:(item:MultiValue<Option> | SingleValue<Option>) => void
+    isMulti:boolean
 }

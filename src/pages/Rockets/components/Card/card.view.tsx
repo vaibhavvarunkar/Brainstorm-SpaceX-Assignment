@@ -3,7 +3,7 @@ import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { ShipInfo } from '../../../../service/models'
 
 
-interface CardProps{
+export interface CardProps{
     item:ShipInfo
     setVisibility:(item?:ShipInfo)=> void
 }
